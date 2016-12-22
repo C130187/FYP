@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/show_image_layout"
+    android:layout_centerInParent="true">
+    <!-- show photo for tag people  -->
+    <ImageView
+        android:id="@+id/photoTagPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        />
+</RelativeLayout>
+    <!-- short description -->
+    <TextView
+        android:id="@+id/titlePeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tap photo to tag people"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/removeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove tag by tapping"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/titlePeople"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <!-- close button -->
+    <ImageButton
+        android:id="@+id/closePeople"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/close"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+    <!-- done button -->
+    <ImageButton
+        android:id="@+id/doneButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/check"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

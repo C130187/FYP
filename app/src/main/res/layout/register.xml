@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.nubusaploy.snapmemory.MainActivity"
+    android:background="@drawable/three_bg">
+
+    <ImageView
+        android:id="@+id/snapMemory"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/snap_memory_white"/>
+
+    <!-- short-description about application -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/snapMemory"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="PRESERVE YOUR PRECIOUS MEMORIES"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/text"/>
+
+        <!-- USERNAME -->
+        <LinearLayout
+            android:id="@+id/edit_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/buttonTrans">
+
+            <!-- FULL NAME -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fullname_registerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/fullname_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- USERNAME  -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_registerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- PASSWORD -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_registerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/button"
+            android:text="Register"
+            android:textColor="@color/text"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Already have an account! Sign In"
+            android:textColor="@color/text"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+</LinearLayout>
+

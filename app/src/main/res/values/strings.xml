@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Snap Memory</string>
+
+    <!-- tracking photo -->
+    <string name="tag_photo">Tag Photo</string>
+    <!-- tracking video -->
+    <string name="tag_video">Tag Video</string>
+    <!-- search photo -->
+    <string name="search_photo">Search</string>
+    <!-- save tracking -->
+    <string name="save">Save</string>
+
+    <!-- Details of Photo -->
+    <!-- Location -->
+    <string name="titleLocation">Location</string>
+    <string name="location">Location</string>
+
+    <!-- Date and Time -->
+    <string name="titleDate">Date</string>
+    <string name="date">DD/MM/YYYY</string>
+    <string name="titleTime">Time</string>
+    <string name="time">00:00:00</string>
+
+    <!-- People -->
+    <string name="titlePeople">People</string>
+    <string name="people_prompt">Tag People</string>
+    <string-array name="people_arrays">
+        <item>Family</item>
+        <item>Neighbours</item>
+        <item>Spouse</item>
+        <item>Friends</item>
+        <item>Classmates</item>
+        <item>Colleagues</item>
+        <item>Acquaintances</item>
+        <item>Strangers</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Activity -->
+    <string name="titleActivity">Activity</string>
+    <string name="activity_prompt">What are you doing?</string>
+    <string-array name="activity_arrays">
+        <item>Work</item>
+        <item>Meal</item>
+        <item>Sports</item>
+        <item>Travel</item>
+        <item>School</item>
+        <item>Shopping</item>
+        <item>Religious</item>
+        <item>Leisure</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Mood -->
+    <string name="titleMood">Mood</string>
+    <string name="mood_prompt">How do you feel?</string>
+    <string-array name="mood_arrays">
+        <item>Astonished</item>
+        <item>Excited</item>
+        <item>Happy</item>
+        <item>Satisfied</item>
+        <item>Tried</item>
+        <item>Sad</item>
+        <item>Miserable</item>
+        <item>Annoyed</item>
+        <item>Neutral</item>
+    </string-array>
+
+    <!-- Mink Add -->
+    <string name="addNewPeopleHint">Enter new people here...</string>
+    <string name="btnAddPeople">Add</string>
+
+    <string name="addNewActivityHint">Enter new activity here...</string>
+    <string name="btnAddActivity">Add</string>
+
+</resources>

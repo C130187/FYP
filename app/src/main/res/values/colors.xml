@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    <color name="colorPrimary">#6A5C80</color>
+    <color name="colorPrimaryDark">#6A5C80</color>
+    -->
+    <color name="colorAccent">#E37249</color>
+
+    <!-- Theme Colors -->
+    <color name="colorPrimary">#6A5C80</color>
+    <color name="colorPrimaryDark">#6A5C80</color>
+    <color name="background">#FAD297</color>
+    <color name="heading">#E37249</color>
+    <color name="text">#FFFFFF</color>
+    <color name="showText">#000000</color>
+    <color name="dateTime">#E29C82</color>
+    <color name="button">#E37249</color>
+    <color name="buttonTrans">#55FFFFFF</color>
+    <color name="buttonTrans2">#C2000000</color>
+
+</resources>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <!-- heading: location -->
+    <TextView
+        android:id="@+id/titleLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/titleLocation"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/heading"
+        android:layout_centerHorizontal="true"/>
+    <ImageButton
+        android:id="@+id/closeLocation"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/close"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/titleLocation"
+        android:layout_toRightOf="@+id/titleLocation"
+        android:layout_toEndOf="@+id/titleLocation"/>
+
+    <!-- search field -->
+    <EditText
+        android:id="@+id/searchLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLocation"
+        android:hint="Find a location"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:id="@+id/titleSuggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUGGESTIONS"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/heading"
+        android:layout_below="@id/searchLocation"
+        android:layout_marginLeft="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ScrollView>
+
+    <!-- list of locations -->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@+id/titleSuggestion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

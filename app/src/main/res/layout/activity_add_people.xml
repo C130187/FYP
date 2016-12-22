@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <!-- heading: search photo -->
+    <TextView
+        android:id="@+id/titlePeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/titlePeople"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/heading"
+        android:layout_centerHorizontal="true"/>
+    <ImageButton
+        android:id="@+id/closeActivity"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/close"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/titlePeople"
+        android:layout_toRightOf="@+id/titlePeople"
+        android:layout_toEndOf="@+id/titlePeople"/>
+
+
+    <ListView
+        android:layout_below="@+id/titlePeople"
+        android:id="@+id/peopleList"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+    </ListView>
+<TextView
+    android:id="@+id/IfOthers"
+    android:layout_below="@+id/peopleList"
+    android:text="If Others, please specify:"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+    <!-- android:layout_below="@+id/peopleList" -->
+    <EditText
+        android:id="@+id/OtherPeople"
+        android:layout_toRightOf="@id/IfOthers"
+        android:layout_below="@id/peopleList"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+<Button
+    android:id="@+id/bt"
+    android:layout_below="@id/IfOthers"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    android:onClick="showSelectedItems"/>
+
+</RelativeLayout>
+</ScrollView>

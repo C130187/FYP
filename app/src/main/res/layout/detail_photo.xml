@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- show photo that user tracking -->
+        <ImageButton
+            android:id="@+id/shownPhoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"/>
+        <!-- android:src="@drawable/ic_launcher" -->
+
+        <!-- Photo Details -->
+        <!-- Date -->
+        <TextView
+            android:id="@+id/titleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleDate"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_marginLeft="10dp"
+            android:layout_above="@+id/titleTime"
+            android:layout_toRightOf="@+id/shownPhoto"
+            android:layout_toEndOf="@+id/shownPhoto" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/titleDate"
+            android:layout_alignLeft="@+id/time"
+            android:layout_alignStart="@+id/time" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/titleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleTime"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_alignBottom="@+id/shownPhoto"
+            android:layout_alignLeft="@+id/titleDate"
+            android:layout_alignStart="@+id/titleDate" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textSize="20dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_alignBottom="@+id/shownPhoto"
+            android:layout_toRightOf="@+id/titleTime"
+            android:layout_toEndOf="@+id/titleTime" />
+
+        <!-- Location -->
+        <ImageView
+            android:id="@+id/iconLocation"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/add_location"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/shownPhoto"
+            android:layout_alignLeft="@+id/shownPhoto"
+            android:layout_alignStart="@+id/shownPhoto"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_marginLeft="10dp"
+            android:layout_above="@+id/detailLocation"
+            android:layout_toRightOf="@+id/iconLocation"
+            android:layout_toEndOf="@+id/iconLocation" />
+
+        <TextView
+            android:id="@+id/detailLocation"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Location"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/iconLocation"
+            android:layout_toRightOf="@+id/iconLocation"
+            android:layout_toEndOf="@+id/iconLocation"/>
+
+        <!-- People -->
+        <ImageView
+            android:id="@+id/iconPeople"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/tag_people"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/detailLocation"
+            android:layout_alignLeft="@+id/shownPhoto"
+            android:layout_alignStart="@+id/shownPhoto"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="People"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_marginLeft="10dp"
+            android:layout_above="@+id/detailPeople"
+            android:layout_toRightOf="@+id/iconPeople"
+            android:layout_toEndOf="@+id/iconPeople" />
+
+        <TextView
+            android:id="@+id/detailPeople"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="People"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/iconPeople"
+            android:layout_toRightOf="@+id/iconPeople"
+            android:layout_toEndOf="@+id/iconPeople"/>
+
+        <!-- Activity -->
+        <ImageView
+            android:id="@+id/iconActivity"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/add_activity"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/detailPeople"
+            android:layout_alignLeft="@+id/shownPhoto"
+            android:layout_alignStart="@+id/shownPhoto"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_marginLeft="10dp"
+            android:layout_above="@+id/detialActivity"
+            android:layout_toRightOf="@+id/iconPeople"
+            android:layout_toEndOf="@+id/iconPeople" />
+
+        <TextView
+            android:id="@+id/detialActivity"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Activity"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/iconActivity"
+            android:layout_toRightOf="@+id/iconPeople"
+            android:layout_toEndOf="@+id/iconPeople"/>
+
+        <!-- Mood -->
+        <ImageView
+            android:id="@+id/iconMood"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/add_mood"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/detialActivity"
+            android:layout_alignLeft="@+id/shownPhoto"
+            android:layout_alignStart="@+id/shownPhoto"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mood"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_alignBottom="@+id/iconMood"
+            android:layout_alignLeft="@+id/detialActivity"
+            android:layout_alignStart="@+id/detialActivity" />
+
+        <TextView
+            android:id="@+id/detialMood"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Mood"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/iconMood"
+            android:layout_toRightOf="@+id/iconPeople"
+            android:layout_toEndOf="@+id/iconPeople"/>
+
+        <!-- back button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/three_back"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/detialMood"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>

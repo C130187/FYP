@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- heading: tag photo -->
+        <TextView
+            android:id="@+id/tag_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tag_photo"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/heading"/>
+
+        <!-- show photo that user tracking -->
+        <ImageButton
+            android:id="@+id/shownPhoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/tag_photo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <!-- Photo Details -->
+        <!-- Date -->
+        <TextView
+            android:id="@+id/titleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleDate"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_marginLeft="10dp"
+            android:layout_above="@+id/titleTime"
+            android:layout_toRightOf="@+id/shownPhoto"
+            android:layout_toEndOf="@+id/shownPhoto"/>
+        <Button
+            android:id="@+id/addDate"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@color/buttonTrans"
+            android:text="@string/date"
+            android:textSize="20dp"
+            android:textColor="@color/heading"
+            android:layout_alignTop="@+id/titleDate"
+            android:layout_alignLeft="@+id/addTime"
+            android:layout_alignStart="@+id/addTime"/>
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/titleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/titleTime"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_alignBottom="@+id/shownPhoto"
+            android:layout_alignLeft="@+id/titleDate"
+            android:layout_alignStart="@+id/titleDate"/>
+        <Button
+            android:id="@+id/addTime"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@color/buttonTrans"
+            android:text="@string/time"
+            android:textSize="20dp"
+            android:textColor="@color/heading"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_alignBottom="@+id/shownPhoto"
+            android:layout_toRightOf="@+id/titleTime"
+            android:layout_toEndOf="@+id/titleTime"/>
+
+        <!-- Caption -->
+        <ImageView
+            android:id="@+id/caption"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/three_caption"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/titleTime"/>
+        <EditText
+            android:id="@+id/textCaption"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:hint="Write a caption..."
+            android:background="@color/buttonTrans"
+            android:gravity="top|left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/titleTime"/>
+
+        <!-- Add Location -->
+        <ImageView
+            android:id="@+id/iconLocation"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/add_location"
+            android:layout_alignTop="@+id/addLocation"
+            android:layout_alignLeft="@+id/caption"
+            android:layout_alignStart="@+id/caption"/>
+        <Button
+            android:id="@+id/addLocation"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="@color/buttonTrans"
+            android:text="UPDATE / ADD LOCATION"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="center|center"
+            android:padding="10dp"
+            android:layout_alignLeft="@id/textCaption"
+            android:layout_alignRight="@id/textCaption"
+            android:layout_below="@+id/location"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="No location added"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="bottom|center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/textCaption"/>
+
+        <!-- Tag People -->
+        <ImageView
+            android:id="@+id/iconPeople"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/tag_people"
+            android:layout_alignTop="@+id/tagPeople"
+            android:layout_alignLeft="@+id/iconActivity"
+            android:layout_alignStart="@+id/iconActivity"/>
+        <Button
+            android:id="@+id/tagPeople"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="@color/buttonTrans"
+            android:text="TAG PEOPLE"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="center|center"
+            android:padding="10dp"
+            android:layout_alignLeft="@id/textCaption"
+            android:layout_alignRight="@id/textCaption"
+            android:layout_below="@+id/people"/>
+        <TextView
+            android:id="@+id/people"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="No people tagged"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="bottom|center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/addLocation"/>
+
+        <!-- Add Activity -->
+        <ImageView
+            android:id="@+id/iconActivity"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/add_activity"
+            android:layout_alignTop="@+id/addActivity"
+            android:layout_alignLeft="@+id/iconLocation"
+            android:layout_alignStart="@+id/iconLocation"/>
+        <Button
+            android:id="@+id/addActivity"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/buttonTrans"
+            android:text="ADD ACTIVITY"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="center|center"
+            android:padding="10dp"
+            android:layout_alignLeft="@id/textCaption"
+            android:layout_alignRight="@id/textCaption"
+            android:layout_below="@+id/activity"/>
+        <TextView
+            android:id="@+id/activity"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="No activity defined"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="bottom|center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/tagPeople"/>
+
+        <!-- Add Mood -->
+        <ImageView
+            android:id="@+id/iconMood"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/add_mood"
+            android:layout_alignTop="@+id/addMood"
+            android:layout_alignLeft="@+id/iconActivity"
+            android:layout_alignStart="@+id/iconActivity"/>
+        <Button
+            android:id="@+id/addMood"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/buttonTrans"
+            android:text="ADD MOOD"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="center|center"
+            android:padding="10dp"
+            android:layout_alignLeft="@id/textCaption"
+            android:layout_alignRight="@id/textCaption"
+            android:layout_below="@+id/mood"/>
+        <TextView
+            android:id="@+id/mood"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="No mood added"
+            android:textColor="@color/heading"
+            android:textStyle="bold"
+            android:gravity="bottom|center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/addActivity"/>
+
+        <!-- save tag -->
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/three_save"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/addMood"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>

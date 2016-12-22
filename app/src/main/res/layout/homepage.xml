@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.nubusaploy.snapmemory.MainActivity"
+    android:background="@drawable/three_bg">
+
+    <!-- heading: name of application -->
+    <ImageView
+        android:id="@+id/snapMemory"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/snap_memory_white"/>
+
+    <!-- short-description about application -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/snapMemory"
+        android:layout_centerHorizontal="true"
+        android:text="PRESERVE YOUR PRECIOUS MEMORIES"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/text"/>
+
+    <!-- select photo -->
+    <ImageButton
+        android:id="@+id/selectPhoto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/three_select"
+        android:layout_below="@id/description"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- search tracking photo button -->
+    <ImageButton
+        android:id="@+id/searchPhoto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/three_search"
+        android:layout_below="@+id/selectPhoto"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- upload to server -->
+    <ImageButton
+        android:id="@+id/uploadPhoto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/three_upload"
+        android:layout_below="@id/searchPhoto"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textViewResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

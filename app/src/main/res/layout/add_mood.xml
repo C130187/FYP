@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <!-- heading: mood -->
+    <TextView
+        android:id="@+id/titleMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/titleMood"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/heading"
+        android:layout_centerHorizontal="true"/>
+    <ImageButton
+        android:id="@+id/closeMood"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/close"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/titleMood"
+        android:layout_toRightOf="@+id/titleMood"
+        android:layout_toEndOf="@+id/titleMood"/>
+
+    <!-- 1 ASTONISHED -->
+    <ImageButton
+        android:id="@+id/astonished"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/astonished"
+        android:layout_below="@+id/titleMood"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:id="@+id/textAstonished"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Astonished"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/astonished"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/astonished"
+        android:layout_alignRight="@+id/astonished"
+        android:layout_alignStart="@+id/astonished"/>
+
+    <!-- 2 EXCITED -->
+    <ImageButton
+        android:id="@+id/excited"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/excited"
+        android:layout_below="@id/titleMood"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textExcited"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Excited"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/excited"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- 3 HAPPY -->
+    <ImageButton
+        android:id="@+id/happy"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/happy"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/excited"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:id="@+id/textHappy"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Happy"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/happy"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/happy"
+        android:layout_alignRight="@+id/happy"
+        android:layout_alignStart="@+id/happy"/>
+
+    <!-- 4 ANNOYED -->
+    <ImageButton
+        android:id="@+id/annoyed"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/annoyed"
+        android:layout_below="@+id/textAstonished"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:id="@+id/textAnnoyed"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Annoyed"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/annoyed"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/annoyed"
+        android:layout_alignRight="@+id/annoyed"
+        android:layout_alignStart="@+id/annoyed"/>
+
+    <!-- 5 NEUTRAL -->
+    <ImageButton
+        android:id="@+id/neutral"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/neutral"
+        android:layout_below="@id/textAstonished"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Neutral"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/neutral"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- 6 SATISFIED -->
+    <ImageButton
+        android:id="@+id/satisfied"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/satisfied"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/neutral"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Satisfied"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/satisfied"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/satisfied"
+        android:layout_alignRight="@+id/satisfied"
+        android:layout_alignStart="@+id/satisfied"/>
+
+    <!-- 7 SAD -->
+    <ImageButton
+        android:id="@+id/sad"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/sad"
+        android:layout_below="@+id/textAnnoyed"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Sad"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/sad"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/sad"
+        android:layout_alignRight="@+id/sad"
+        android:layout_alignStart="@+id/sad"/>
+
+    <!-- 8 TIRED -->
+    <ImageButton
+        android:id="@+id/tired"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/tired"
+        android:layout_below="@id/textAnnoyed"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Tired"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/tired"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- 9 MISERABLE -->
+    <ImageButton
+        android:id="@+id/miserable"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/miserable"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@+id/tired"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Miserable"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/miserable"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/miserable"
+        android:layout_alignRight="@+id/miserable"
+        android:layout_alignStart="@+id/miserable"/>
+
+</RelativeLayout>

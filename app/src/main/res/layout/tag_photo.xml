@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- heading: tag photo -->
+        <TextView
+            android:id="@+id/tag_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/tag_photo"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/heading"/>
+
+        <!-- show photo that user tracking -->
+        <ImageView
+            android:id="@+id/shownPhoto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/tag_photo"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+        <!-- android:src="@drawable/ic_launcher" -->
+
+        <!-- fill details of the image -->
+        <!-- Use time of photo taking, Otherwise last modify -->
+        <!-- Date -->
+        <TextView
+            android:id="@+id/titleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shownPhoto"
+            android:text="@string/titleDate"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"/>
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:textSize="20dp"
+            android:layout_above="@+id/titleTime"
+            android:layout_toRightOf="@+id/titleActivity"
+            android:layout_toEndOf="@+id/titleActivity"/>
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/titleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleTime"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_below="@+id/titleDate"
+            android:layout_alignLeft="@+id/titleDate"
+            android:layout_alignStart="@+id/titleDate"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/time"
+            android:textSize="20dp"
+            android:layout_below="@+id/date"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"/>
+
+        <!-- location: where user took photo -->
+        <TextView
+            android:id="@+id/titleLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:text="@string/titleLocation"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"/>
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/location"
+            android:layout_below="@+id/titleLocation"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"/>
+
+        <!-- people: whom user took photo -->
+        <TextView
+            android:id="@+id/titlePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:text="@string/titlePeople"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"/>
+        <EditText
+            android:id="@+id/newpeople"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/titlePeople"
+            android:layout_below="@id/location"
+            android:inputType="text"
+            android:hint="@string/addNewPeopleHint"/>
+        <Button
+            android:id="@+id/btnAddPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAddPeople"
+            android:layout_toRightOf="@id/newpeople"
+            android:layout_below="@id/location"/>
+        <Spinner
+            android:id="@+id/peoplespinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newpeople"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/people_chosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="People Tag : No one"
+            android:textSize="15dp"
+            android:layout_below="@+id/peoplespinner"
+            android:layout_alignLeft="@+id/titlePeople"
+            android:layout_alignStart="@+id/titlePeople"/>
+
+        <!-- activity: what kinds of activitiy user did -->
+        <TextView
+            android:id="@+id/titleActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleActivity"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_alignTop="@+id/btnAddActivity"
+            android:layout_alignLeft="@+id/titleMood"
+            android:layout_alignStart="@+id/titleMood"/>
+        <EditText
+            android:id="@+id/newactivity"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/addNewActivityHint"
+            android:layout_above="@+id/activityspinner"
+            android:layout_alignLeft="@+id/newpeople"
+            android:layout_alignStart="@+id/newpeople"/>
+        <Button
+            android:id="@+id/btnAddActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAddPeople"
+            android:layout_below="@+id/people_chosen"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+        <Spinner
+            android:id="@+id/activityspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/btnAddActivity"
+            android:layout_alignLeft="@+id/titleActivity"
+            android:layout_alignStart="@+id/titleActivity"/>
+        <TextView
+            android:id="@+id/activity_chosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity Tag : No Activity"
+            android:textSize="15dp"
+            android:layout_below="@+id/activityspinner"
+            android:layout_alignLeft="@+id/titlePeople"
+            android:layout_alignStart="@+id/titlePeople"/>
+
+
+        <!-- mood: what user feel when did the activity -->
+        <TextView
+            android:id="@+id/titleMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titleMood"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_below="@+id/activity_chosen"/>
+        <Spinner
+            android:id="@+id/feelingSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/mood_prompt"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/titleMood"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <!-- save tag -->
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/three_save"
+            android:layout_below="@id/feelingSpinner"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>
