@@ -298,7 +298,7 @@ public class Tag extends AppCompatActivity {
                     i.putExtra("user_id", user_id);
                     startActivityForResult(i, PEOPLE);
                 }
-            });
+            })
 
 
             //For Activity
