@@ -236,8 +236,8 @@ public class MainActivity extends Activity {
                 //tempvideo.setModified_after_upload(false);
 
                 Toast.makeText(this,"second for loop:"+temppath + tempimage.isUpload_status()+tempimage.isModified_after_upload(),Toast.LENGTH_LONG).show();
-                BackgroundTVideo backgroundT_video = new BackgroundTVideo(this);
-                backgroundT_video.execute(method, ""+event_date, event_time, event_mood,event_description,event_location,
+                BackgroundTImage backgroundT_image = new BackgroundTImage(this);
+                backgroundT_image.execute(method, ""+event_date, event_time, event_mood,event_description,event_location,
                         String.valueOf(latitude),String.valueOf(longitude), filepath, event_people, String.valueOf(people_count),"true");
 
             }
@@ -289,6 +289,7 @@ public class MainActivity extends Activity {
             backgroundT_image.execute(method, ""+event_date, event_time, event_mood,event_description,event_location,
                     String.valueOf(latitude),String.valueOf(longitude), filepath, event_people,String.valueOf(people_count), "false");
             //Log.d(temppath,"pathh");
+            Toast.makeText(this,event_date+event_mood+event_people,Toast.LENGTH_LONG).show();
             selectedPath = temppath;
             uploadImage(realm, tempimage);
 

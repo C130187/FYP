@@ -178,6 +178,8 @@ public class Tag extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        Toast.makeText(this,"entered Tag people", Toast.LENGTH_LONG).show();
+
         //For Image
         openImage();
         getImageWidthLength(imagePath);
@@ -232,7 +234,7 @@ public class Tag extends AppCompatActivity {
         if(check1.size()!=0) {
             Image results2 =
                     realmtest.where(Image.class)
-                            .contains("video_path", imagePath)
+                            .contains("image_path", imagePath)
                             .findFirst();
             if (results2 != null) {
                 //String existing_people = results2.getPeople_name();
@@ -279,11 +281,13 @@ public class Tag extends AppCompatActivity {
                 btnChangeDate.setText(existing_date);
                 btnChangeTime.setText(existing_time);
 
+                }
             }
             //For Tag People
             people_chosen = new String[int_people_count * 4];
             t_people = (TextView) findViewById(R.id.people);
             btnTagPeople = (Button) findViewById(R.id.tagPeople);
+            Toast.makeText(this,"entering people section",Toast.LENGTH_LONG).show();
             btnTagPeople.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -298,7 +302,7 @@ public class Tag extends AppCompatActivity {
                     i.putExtra("user_id", user_id);
                     startActivityForResult(i, PEOPLE);
                 }
-            })
+            });
 
 
             //For Activity
@@ -335,8 +339,6 @@ public class Tag extends AppCompatActivity {
                 }
             });
         }
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -1110,7 +1112,7 @@ public class Tag extends AppCompatActivity {
         firstHaveLatLng = true;
         LatLngBounds BOUNDS_MOUNTAIN_VIEW = new LatLngBounds(
                 new LatLng(latitude, longitude), new LatLng(latitude,longitude));
-        Toast.makeText(this,"Entered pick location",Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,"Entered pick location",Toast.LENGTH_LONG).show();
         PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
         builder.setLatLngBounds(BOUNDS_MOUNTAIN_VIEW);
         Context context = this;
