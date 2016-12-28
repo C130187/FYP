@@ -19,6 +19,7 @@ import java.util.ArrayList;
  */
 public class BackgroundTImage extends AsyncTask<String,Void, String> {
 
+
     Context ctx;
     String image_id = "";
     BackgroundTImage(Context ctx){
@@ -38,7 +39,7 @@ public class BackgroundTImage extends AsyncTask<String,Void, String> {
     protected String doInBackground(String... params) {
         //save_url = ip of server/php file
         //String save_url = "http://10.27.117.155/snapMemory/save_image.php";//10.0.2.2 in emulator
-        String save_url = "http:// 192.168.1.3/MyLife/albums_browser/image_metadata.php";//10.0.2.2 in emulator
+        String save_url = "http://192.168.1.5/MyLife/albums_browser/image_metadata.php";//10.0.2.2 in emulator
         String method = params[0];
         if(method.equals("tag_image")){
             //Get value from Tag Page
@@ -54,6 +55,13 @@ public class BackgroundTImage extends AsyncTask<String,Void, String> {
             people_count = Integer.parseInt(params[10]);
             String event_update = params[11];
             splitPeopleChosenToPeopleArray(people_chosen_string);
+
+            if(android.os.Debug.isDebuggerConnected())
+            {
+                android.os.Debug.waitForDebugger();
+            }
+            //Log.d("entered lah", "very happy lah");
+
 
             try {
                 //Connect to server and send data to php file
@@ -109,9 +117,9 @@ public class BackgroundTImage extends AsyncTask<String,Void, String> {
      * @param people_chosen
      */
     public void splitPeopleChosenToPeopleArray(String people_chosen){
-        people = new ArrayList<String>();
-        x = new ArrayList<String>();
-        y = new ArrayList<String>();
+        ArrayList<String> people = new ArrayList<String>();
+        ArrayList<String> x = new ArrayList<String>();
+        ArrayList<String> y = new ArrayList<String>();
         String people_chosen_[] = people_chosen.split(",",people_count*3);
 
         if (people_chosen_ != null) {

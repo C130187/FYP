@@ -139,6 +139,7 @@ public class Tag extends AppCompatActivity {
     String imagePath_chosen, locationName_chosen, locationAddress_chosen,
             latitude_chosen, longitude_chosen, mood_chosen, image_datetime,
             activity_chosen;
+    String people_chosen_string = "";
     String caption="";
     String horizontal_size_pic = "0";
     String vertical_size_pic = "0";
@@ -246,22 +247,22 @@ public class Tag extends AppCompatActivity {
                 activity_chosen = existing_activity;
                 mood_chosen = existing_mood;
                 locationName_chosen = existing_location;
-                t_location.setText(existing_location);
+                //t_location.setText(existing_location);
 
                 if (!activity_chosen.equals("")) {
                     btnAddActivity.setText("Change Activity");
-                    t_activity.setText(activity_chosen);
+                    //t_activity.setText(activity_chosen);
                 } else {
                     btnAddActivity.setText("No Activity Added");
-                    t_activity.setText(activity_chosen);
+                    //t_activity.setText(activity_chosen);
 
                 }
                 if (!mood_chosen.equals("")) {
                     btnAddMood.setText("Change Mood");
-                    t_mood.setText(mood_chosen);
+                    //t_mood.setText(mood_chosen);
                 } else {
                     btnAddMood.setText("No Mood Added");
-                    t_mood.setText(mood_chosen);
+                    //t_mood.setText(mood_chosen);
 
                 }
                 /* come back to this later
@@ -985,6 +986,7 @@ public class Tag extends AppCompatActivity {
             List<Address> geoResult = null;
             try {
                 geoResult = geocoder.getFromLocation(latitude, longitude,1);
+                Log.d("geoResult",geoResult.toString());
                 if(geoResult != null){
                     List<String> geoStringResult = new ArrayList<String>();
 
@@ -1245,6 +1247,18 @@ public class Tag extends AppCompatActivity {
                 }
             }
         }
+
+
+        for(int i =0 ; i<people.size();i++){
+            if(i<people.size()-1){
+                people_chosen_string+=people.get(i)+","+x.get(i)+","+y.get(i)+",";
+            }else{
+                people_chosen_string+=people.get(i)+","+x.get(i)+","+y.get(i);
+            }
+        }
+
+
+
     }
 
     /**
@@ -1443,6 +1457,20 @@ public class Tag extends AppCompatActivity {
         }
 
      */
+        //convert people from array to comma separated string
+        /*
+        String people_string = "";
+        if (people_chosen.length > 0)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (String s : people_chosen) { sb.append(s).append(",");
+
+            }
+
+            people_string = sb.deleteCharAt(sb.length() - 1).toString();
+        }
+        */
         Realm realmsave = Realm.getInstance(this);
         RealmResults<Image> check1 =  realmsave.where(Image.class)
                 .findAll();
@@ -1470,9 +1498,7 @@ public class Tag extends AppCompatActivity {
                 image.setHorizontal_size_pic(Integer.parseInt(horizontal_size_pic));
                 image.setVertical_size_pic(Integer.parseInt(vertical_size_pic));
                 image.setPeople_count(Integer.parseInt(people_count));
-                //if(people_chosen!=null) {
-                //    image.setPeople_name(people_chosen);
-                //}
+                image.setPeople_name(people_chosen_string);
                 image.setLatitude(String.valueOf(latitude));
                 image.setLongitude(String.valueOf(longitude));
                 if(activity_chosen!=null) {
@@ -1485,6 +1511,19 @@ public class Tag extends AppCompatActivity {
                 image.setUpload_status(false);
                 image.setModified_after_upload(false);
                 realm.commitTransaction();
+                Log.d("time",time);
+                Log.d("date",date);
+                Log.d("date_formatted",date_formatted);
+                Log.d("description",caption);
+                Log.d("latitude",String.valueOf(latitude));
+                Log.d("longitude",String.valueOf(longitude));
+                Log.d("people_count",people_count);
+                Log.d("people_chosen",people_chosen.toString());
+                Log.d("activity_chosen",activity_chosen);
+                Log.d("mood_chosen",mood_chosen);
+                Log.d("location",locationAddress_chosen);
+                Toast.makeText(this,image.getPeople_name()+String.valueOf(image.getPeople_count()),Toast.LENGTH_LONG).show();
+
             } else {
                 realm.beginTransaction();
                 results3.setTime(time);//format DD MM YYYY|HH:MM
@@ -1496,12 +1535,12 @@ public class Tag extends AppCompatActivity {
                 results3.setDescription(caption);
                 results3.setHorizontal_size_pic(Integer.parseInt(horizontal_size_pic));
                 results3.setVertical_size_pic(Integer.parseInt(vertical_size_pic));
-                //if(people_chosen!=null){
-                //    results3.setPeople_name(people_chosen);
-                //}
+                if(people_chosen_string!=null && people_count!=null){
+                    results3.setPeople_name(people_chosen_string);
+                    results3.setPeople_count(Integer.parseInt(people_count));
+                }
                 results3.setLatitude(String.valueOf(latitude));
                 results3.setLatitude(String.valueOf(longitude));
-                results3.setPeople_count(Integer.parseInt(people_count));
                 if(activity_chosen!=null){
                     results3.setActivity_name(activity_chosen);
                 }

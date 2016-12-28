@@ -35,7 +35,7 @@ public class BackgroundTVideo extends AsyncTask<String,Void, String> {
     @Override
     protected String doInBackground(String... params) {
         //save_url = ip of server/php file
-        String save_url = "http:// 192.168.1.3/MyLife/albums_browser/video_metadata.php";
+        String save_url = "http://192.168.1.5/MyLife/albums_browser/video_metadata.php";
         //String save_url = "http://10.27.87.200/MyLife/albums_browser/video_metadata.php";//10.0.2.2 in emulator
         //String save_url = "http://192.168.0.102/MyLife/albums_browser/video_metadata.php";
        // String save_url = "http://172.22.186.22/MyLife/albums_browser/video_metadata.php";//10.0.2.2 in emulator

@@ -260,6 +260,7 @@ public class MainActivity extends Activity {
                 filepath = "",latitude = "", longitude = "", event_people="";
         int people_count =0 ;
 
+
         Realm realm = Realm.getInstance(this);
 
         RealmResults<Image> result = realm.where(Image.class)
@@ -288,7 +289,16 @@ public class MainActivity extends Activity {
             BackgroundTImage backgroundT_image = new BackgroundTImage(this);
             backgroundT_image.execute(method, ""+event_date, event_time, event_mood,event_description,event_location,
                     String.valueOf(latitude),String.valueOf(longitude), filepath, event_people,String.valueOf(people_count), "false");
-            //Log.d(temppath,"pathh");
+            Log.d(temppath,"pathh");
+            Log.d(event_date,"date");
+            Log.d(event_time,"time");
+            Log.d(event_mood,"mood");
+            Log.d(event_description,"description");
+            Log.d(event_location,"location");
+            Log.d(latitude,"latitude");
+            Log.d(longitude,"longitude");
+            Log.d(event_people,"event_people");
+            Log.d(String.valueOf(people_count),"people_count");
             Toast.makeText(this,event_date+event_mood+event_people,Toast.LENGTH_LONG).show();
             selectedPath = temppath;
             uploadImage(realm, tempimage);
